@@ -42,16 +42,16 @@ public class Test_API {
 
     @Test
     public void gorest() {
-        Response b=
+        Response b =
                 (Response) RestAssured.given().baseUri("https://gorest.co.in")
                         .basePath("public-api")
-                        .header("Authorization","Bearer LS-SDXguT8eSKP58TZ6yMT6wZpit93MDZcpp")
-                        .param("email","rzn.popov@gmail.com")
-                .param("first_name", "Ivan")
-                         .param("last_name","Popov")
-                         .param("gender","male")
-                         .param("status", "active")
-                .post("/users");
+                        .header("Authorization", "Bearer LS-SDXguT8eSKP58TZ6yMT6wZpit93MDZcpp")
+                        .param("email", "rzn.popov@gmail.com")
+                        .param("first_name", "Ivan")
+                        .param("last_name", "Popov")
+                        .param("gender", "male")
+                        .param("status", "active")
+                        .post("/users");
         b.getBody().prettyPrint();
     }
 // После выполнения этого задания, я теперь лично понял, что мне тоже больше по душе RestAssured
